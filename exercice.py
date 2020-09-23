@@ -23,7 +23,7 @@ def use_prefixes() -> List[str]:
 def prime_integer_summation() -> int:
     primes = []
    
-    i = 2 
+    i = 2
     while len(primes) < 100:
         is_prime = True 
 
@@ -33,16 +33,31 @@ def prime_integer_summation() -> int:
 
         if is_prime:
             primes.append(i)
+        
+        i += 1 
     
     return sum(primes)
 
 
 def factorial(number: int) -> int:
-    return 0
+    return math.factorial(number)
 
 
 def use_continue() -> None:
-    pass
+   
+    boucle = []
+
+    for x in range (1, 11):
+        
+        if x == 5 : 
+            continue
+        
+        boucle.append(x)
+
+    print(boucle)
+    return boucle
+    
+ 
 
 
 def main() -> None:
@@ -50,7 +65,7 @@ def main() -> None:
 
     print(f"La liste des noms générés avec les préfixes est: {use_prefixes()}")
 
-    print(f"La somme des nombres de 0 à 100 est: {prime_integer_summation()}")
+    print(f"La somme des 100 premiers nombres premiers est: {prime_integer_summation()}")
 
     number = 10
     print(f"La factiorelle du nombre {number} est: {factorial(number)}")
